@@ -1,0 +1,8 @@
+* text=auto
+*.html linguist-language=PHP
+*.blade.php linguist-language=PHP
+*.html.twig linguist-language=PHP
+*.css linguist-vendored
+*.scss linguist-vendored
+*.js linguist-vendored
+CHANGELOG.md export-ignore
