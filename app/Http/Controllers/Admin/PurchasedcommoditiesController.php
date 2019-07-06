@@ -53,6 +53,7 @@ class PurchasedcommoditiesController extends BaseController
      */
     public function show($id)
     {
+
         $main = Purchasedgoods::find($id);
         return view('admin.purchased-commodities.show', compact('main'));
     }

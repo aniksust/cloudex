@@ -12,19 +12,35 @@ Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function () {
 //    Route::get('AuthController@policytermsandconditions', 'policy-terms-and-conditions')->name('policy-terms-and-conditions');
 });
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'roles'], 'block' => ['User']], function () {
-    Route::group(['roles' => ['Author', 'Moderator', 'Admin']], function () {
+        Route::group(['roles' => ['Author', 'Admin']], function () {
+            Route::get('/', 'AdminController@index')->name('admin.index');
+        });
+        Route::group(['roles' => ['Author', 'Admin']], function () {
+            Route::resource('products', 'ProductController');
+            Route::resource('categories', 'CategoryController');
+            Route::resource('brands', 'BrandController');
+            Route::resource('mades', 'MadeController');
+            Route::resource('reviews', 'ReviewController');
+            Route::get('help', 'AdminController@help')->name('admin.help');
+            Route::put('help', 'AdminController@helpupdate');
+            Route::resource('subscribes', 'SubscribeController');
+
+        });
+
+    Route::group(['roles' => ['Author', 'Admin']], function () {
+        Route::get('orders', 'OrderController@index')->name('author.index');
         Route::get('/', 'AdminController@index')->name('admin.index');
-    });
-    Route::group(['roles' => ['Moderator', 'Admin']], function () {
-        Route::resource('products', 'ProductController');
-        Route::resource('categories', 'CategoryController');
-        Route::resource('brands', 'BrandController');
-        Route::resource('mades', 'MadeController');
-        Route::resource('reviews', 'ReviewController');
         Route::get('help', 'AdminController@help')->name('admin.help');
-        Route::put('help', 'AdminController@helpupdate');
-        Route::resource('subscribes', 'SubscribeController');
     });
+
+
+
+
+
+
+
+
+
     Route::group(['roles' => ['Admin']], function () {
         Route::resource('users', 'UserController');
         Route::resource('wishlists', 'WishlistController');

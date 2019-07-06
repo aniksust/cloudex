@@ -27,7 +27,7 @@
         </tr>
         <tr>
             <th>{{ __('admin.brands-images') }}</th>
-            <td><img src="{{ asset('storage/'.$main->images) }}" width="100px"></td>
+            <td><img src="{{ asset('storage/app/brands'.$main->images) }}" width="100px"></td>
         </tr>
         <tr>
             <th>{{ __('admin.products-description') }}</th>

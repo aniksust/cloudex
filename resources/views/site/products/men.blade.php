@@ -43,7 +43,7 @@
 								@if($item->images == 'none')
 									<a class="cbp-vm-image" href="{{ asset('/images/photo-not-available.png') }}"></a>
 								@else
-									<a class="cbp-vm-image" href="{{ asset('storage').'/'.$item->images }}"></a>
+									<a class="cbp-vm-image" href="{{  asset('storage').'/'.$item->images  }}"></a>
 								@endif
 								<div class="simpleCart_shelfItem"><a class="cbp-vm-image" href="{{ route('site.men-view',$item->url) }}">
 										<div class="view view-first">
@@ -55,7 +55,7 @@
 														<img src="{{ asset('storage').'/'.$item->images }}" class="img-responsive" alt="">
 													@endif
 													<div class="mask">
-														<div class="info">{{ __('site.men-quick-view') }}</div>
+														<div class="info">Quick view</div>
 													</div>
 													<div class="product_container">
 														<div class="cart-left">
@@ -71,7 +71,7 @@
 									<div class="cbp-vm-details">{{ $item->description }}</div>
 									<form action="{{ route('cart.store', $item) }}" method="post">
 										@csrf
-										<input type="submit" class="cbp-vm-icon cbp-vm-add item_add border-none" value="{{ __('site.men-add-to-cart') }}">
+										<input type="submit" class="cbp-vm-icon cbp-vm-add item_add border-none" value="Add to chart">
 									</form>
 								</div>
 							</li>

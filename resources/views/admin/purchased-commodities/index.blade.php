@@ -25,6 +25,7 @@
                 <th scope="col">{{ __('admin.purchased-commodities-id') }}</th>
                 <th scope="col">{{ __('admin.purchased-commodities-user') }}</th>
                 <th scope="col">{{ __('admin.purchased-commodities-product') }}</th>
+                <th scope="col">Price</th>
                 <th scope="col"></th>
             </tr>
             </thead>
@@ -34,6 +35,7 @@
                     <th scope="row">{{ $item->id }}</th>
                     <td scope="row">{{ $item->user->name }}</td>
                     <td scope="row">{{ $item->product->name }}</td>
+                    <td scope="row">{{ $item->product->price }}</td>
                     <td scope="row">
                         <a href="{{ route('purchased-commodities.show',$item->id) }}"><i class="far fa-eye"></i></a>
                         <a href="{{ route('purchased-commodities.edit',$item->id) }}"><i class="fas fa-edit"></i></a>

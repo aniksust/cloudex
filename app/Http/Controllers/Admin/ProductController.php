@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Resources\Product\ProductResource;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Made;
@@ -16,13 +17,62 @@ class ProductController extends BaseController
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Product[]|\Illuminate\Database\Eloquent\Collection
      */
     public function index()
     {
         $main = Product::all();
+//        return $main->toArray();
+
         return view('admin.products.index', compact('main'));
     }
+
+
+    public function index1()
+    {
+        $main = Product::all();
+//        return $main->toArray();
+
+        return ProductResource::collection($main);
+    }
+    public function index2($id)
+    {
+        $main = Product::findOrFail($id);
+//        return $main->toArray();
+
+        return new ProductResource($main);
+    }
+
+
+    public function index3(Request $request)
+    {
+        $main = $request->isMethod('put') ? Product::findOrFail($request->id):new Product;
+//
+        $main->id = $request ->input('id');
+        $main->name = $request ->input('name');
+        $main->description = $request ->input('description');
+        if($main->save()){
+            return new ProductResource($main);
+        }
+
+
+//        return $main->toArray();
+
+//        return new ProductResource($main);
+    }
+
+
+
+    public function index4($id)
+    {
+        $main = Product::findOrFail($id);
+//        return $main->toArray();
+
+        if($main->delete()){
+            return new ProductResource($main);
+        }
+    }
+
 
     /**
      * Show the form for creating a new resource.

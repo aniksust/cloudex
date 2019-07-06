@@ -7,7 +7,7 @@
 		<div class="container">
 			<div class="banner-bottom">
 				<div class="banner-bottom-left">
-					<h2>B<br>U<br>Y</h2>
+					<h2>B<br>U<br>Y<br>Y</h2>
 				</div>
 				<div class="banner-bottom-right">
 					<div class="callbacks_container">

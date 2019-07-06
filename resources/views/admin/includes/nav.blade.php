@@ -8,7 +8,10 @@
 			<li class="nav-item {{ url()->current() == route('admin.index') ? 'active' : '' }}">
 				<a class="nav-link" href="{{ route('admin.index') }}"><i class="fas fa-home"></i> {{ __('admin.nav-home') }}</a>
 			</li>
-			@if(in_array(Auth::user()->role->name, ['Moderator','Admin']))
+
+
+
+			@if(in_array(Auth::user()->role->name, ['Author','Admin']))
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
 					   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -28,6 +31,28 @@
 					<a class="nav-link" href="{{ route('subscribes.index') }}"><i class="fas fa-bell"></i> {{ __('admin.nav-subscribes') }}</a>
 				</li>
 			@endif
+
+
+            @if(in_array(Auth::user()->role->name, ['Author']))
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-shopping-cart"></i> {{ __('admin.nav-online-shop') }}</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('author.index') }}"><i class="fas fa-tshirt"></i> My Orders</a>
+
+                    </div>
+                </li>
+                <li class="nav-item {{ Request::is('*help*') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('admin.help') }}"><i class="fas fa-question-circle"></i> {{ __('admin.nav-help') }}</a>
+                </li>
+                <li class="nav-item {{ Request::is('*subscribes*') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('subscribes.index') }}"><i class="fas fa-bell"></i> {{ __('admin.nav-subscribes') }}</a>
+                </li>
+            @endif
+
+
+
 			@if(in_array(Auth::user()->role->name, ['Admin']))
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

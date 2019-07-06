@@ -17,6 +17,7 @@ class ProductController extends BaseController
         $main = Product::where('type_id', 1)->where('status', 1)->paginate(10);
         $brands = Brand::where('status', 1)->get();
         $category = Category::where('status', 1)->where('men', 1)->get();
+//        return $main;
         return view('site.products.men', compact('main', 'category', 'brands'));
     }
 

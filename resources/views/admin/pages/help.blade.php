@@ -45,7 +45,8 @@
             <textarea class="form-control" name="brands" placeholder="{{ __('admin.help-enter-brands') }}" rows="15"
                       required>{{ $main->brands }}</textarea>
         </div>
-
+        @if(!in_array(Auth::user()->role->name, ['Author']))
         <button class="btn btn-lg btn-original btn-block" type="submit">{{ __('admin.edit') }}</button>
+            @endif
     </form>
 @endsection

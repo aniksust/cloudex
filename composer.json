@@ -4,6 +4,9 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
+
+
+
     "require": {
         "php": "^7.1.3",
         "cartalyst/stripe-laravel": "^10.0",
@@ -13,7 +16,14 @@
         "league/flysystem-aws-s3-v3": "^1.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
-        "predis/predis": "^1.1"
+        "predis/predis": "^1.1",
+        "silex/silex": "^2.0.4",
+        "monolog/monolog": "^1.22",
+        "twig/twig": "^2.0",
+        "symfony/twig-bridge": "^3",
+        "alrik11es/cowsayphp": "^1.2",
+        "csanquer/pdo-service-provider": "~1.1dev",
+        "bitfumes/laravel-multiauth": "^1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -23,7 +33,8 @@
         "laravel/telescope": "^2.0",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^2.0",
-        "phpunit/phpunit": "^7.5"
+        "phpunit/phpunit": "^7.5",
+        "heroku/heroku-buildpack-php": "*"
     },
     "extra": {
         "laravel": {

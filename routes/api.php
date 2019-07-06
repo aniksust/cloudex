@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Admin\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('products', 'Admin\ProductController@index1');
+
+Route::get('product/{id}', 'Admin\ProductController@index2');
+
+Route::post('product', 'Admin\ProductController@index3');
+
+Route::put('product', 'Admin\ProductController@index3');
+
+Route::delete('product/{id}', 'Admin\ProductController@index4');

@@ -40,7 +40,7 @@
 					@else
 						<li class="while"><span class="glyphicon glyphicon-volume-up"></span> {{ __('site.nav-hello').', '.Auth::user()->name }}</li>
 						<li><a href="{{ route('profile.index') }}"><span class="glyphicon glyphicon-user"> </span>{{ __('site.nav-personal-area') }}</a></li>
-						@if(in_array(Auth::user()->role->name, ['Author','Moderator','Admin']))
+						@if(in_array(Auth::user()->role->name, ['Author','Author','Admin']))
 							<li><a href="{{ route('admin.index') }}"><span class="glyphicon glyphicon-cog"> </span> {{ __('site.nav-admin-panel') }}</a></li>
 						@endif
 						<li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><span class="glyphicon glyphicon-log-in"> </span> {{ __('site.nav-logout') }}</a></li>
@@ -79,7 +79,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<div class="logo">
-					<h1><a href="{{ route('site.index') }}"><span>E</span> -Shop</a></h1>
+					<h1><a href="{{ route('site.index') }}"><span>C</span>loudex</a></h1>
 				</div>
 			</div>
 			<!--/.navbar-header-->
@@ -185,7 +185,7 @@
 		</div>
 		<div class="copyright text-center">
 			<p>{{ __('site.title') }} ©{{ date('Y') }}. {{__('site.all-rights-reserved')}}</p>
-			<p>Made with <i class="glyphicon glyphicon-heart"></i> by  <a href="https://slavapleshkov.com/" rel="nofollow" target="_blank">Slava Pleshkov</a>.</p>
+			<p>Made with <i class="glyphicon glyphicon-heart"></i> by <strong>Md. Anwer Hossain and TEAM</strong>.</p>
 		</div>
 	</div>
 </div>

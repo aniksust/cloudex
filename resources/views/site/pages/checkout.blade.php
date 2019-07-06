@@ -118,10 +118,13 @@
 									<div id="card-errors" role="alert"></div>
 								</li>
 							</ul>
-							<input type="submit" value="{{ __('site.checkout-complete-order') }}">
+							<input type="submit" value="{{ __('site.checkout-complete-ordervxv') }}">
 						</form>
 					</div>
 				</div>
+
+
+
 				<div class="reg-right">
 					<h3>{{ __('site.cart-title') }}</h3>
 					<p>{{ __('site.cart-count').Cart::count().' | '.__('site.cart-tax').'$ '.Cart::tax().' | '.__('site.cart-total').'$ '.Cart::subtotal() }}</p>

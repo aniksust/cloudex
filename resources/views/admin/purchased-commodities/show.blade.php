@@ -29,6 +29,14 @@
             <td>{{ $main->product->name  }}</td>
         </tr>
         <tr>
+            <th>Price</th>
+            <td>{{ $main->product->price  }}</td>
+        </tr>
+        <tr>
+            <th>Brand</th>
+            <td>{{ $main->product->brand_id  }}</td>
+        </tr>
+        <tr>
             <th>{{ __('admin.created') }}</th>
             <td>{{ $main->created_at }}</td>
         </tr>

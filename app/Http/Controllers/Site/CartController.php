@@ -22,7 +22,7 @@ class CartController extends BaseController
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Product $product
+     * @param  \App\Models\Product $product
      * @return \Illuminate\Http\Response
      */
     public function store(Product $product)
@@ -35,7 +35,12 @@ class CartController extends BaseController
         }
         $brand = Brand::where('id', $product->brand_id)->first();
         $made = Made::where('id', $product->made_id)->first();
-        Cart::add($product->id, $product->name, 1, $product->price, ['images' => $product->images, 'description' => $product->description, 'sale' => $product->sale, 'brand' => $brand, 'made' => $made, 'color' => $product->color, 'trend' => $product->trend, 'url' => $product->url])->associate('App\Product');
+//        $asso = Product::all();
+        Cart::add($product->id, $product->name, 1, $product->price,
+               ['images' => $product->images, 'description' => $product->description, 'sale' => $product->sale,
+                'brand' => $brand, 'made' => $made, 'color' => $product->color,
+                'trend' => $product->trend, 'url' => $product->url])->associate('App\Product');
+
         return redirect()->route('cart.index')->with('success', __('site.cart-success-item-added'));
     }
 
