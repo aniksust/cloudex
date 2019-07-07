@@ -43,7 +43,7 @@
 								@if($item->images == 'none')
 									<a class="cbp-vm-image" href="{{ asset('/images/photo-not-available.png') }}"></a>
 								@else
-									<a class="cbp-vm-image" href="{{  asset('storage').'/'.$item->images  }}"></a>
+									<a class="cbp-vm-image" href="{{  asset('storage/products').'/'.$item->images  }}"></a>
 								@endif
 								<div class="simpleCart_shelfItem"><a class="cbp-vm-image" href="{{ route('site.men-view',$item->url) }}">
 										<div class="view view-first">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\Brand;
 use App\Models\User;
 use App\Models\Role;
 use App\Http\Requests\User as Request;
@@ -40,7 +41,7 @@ class UserController extends BaseController
     public function store(Request $request)
     {
         User::create([
-            'firstname' => $request->firstname,
+            'name' => $request->name,
 //            'lastname' => $request->lastname,
             'number' => $request->number,
             'email' => $request->email,
@@ -58,8 +59,9 @@ class UserController extends BaseController
      */
     public function show($id)
     {
+        $brand=Brand::all();
         $main = User::find($id);
-        return view('admin.users.show', compact('main'));
+        return view('admin.users.show', compact('main','brand'));
     }
 
     /**
@@ -85,8 +87,8 @@ class UserController extends BaseController
     public function update(Request $request, $id)
     {
         User::find($id)->update([
-            'firstname' => $request->firstname,
-            'lastname' => $request->lastname,
+            'name' => $request->firstname,
+//            'lastname' => $request->lastname,
             'number' => $request->number,
             'email' => $request->email,
             'password' => Hash::make($request->password),

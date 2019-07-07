@@ -63,6 +63,7 @@
 						<a class="dropdown-item {{ Request::is('*roles*') ? 'active' : '' }}" href="{{ route('roles.index') }}"><i class="fas fa-user-shield"></i> {{ __('admin.nav-roles') }}</a>
 						<a class="dropdown-item {{ Request::is('*wishlists*') ? 'active' : '' }}" href="{{ route('wishlists.index') }}"><i class="fas fa-list-ul"></i> {{ __('admin.nav-wishlists') }}</a>
 						<a class="dropdown-item {{ Request::is('*purchased-commodities*') ? 'active' : '' }}" href="{{ route('purchased-commodities.index') }}"><i class="fas fa-list-ol"></i> {{ __('admin.nav-purchased-commodities') }}</a>
+                        <a class="dropdown-item {{ Request::is('*add-vendor*') ? 'active' : '' }}" href="{{ route('vendor.index') }}"><i class="fas fa-th-list"></i> Add Vendor</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">

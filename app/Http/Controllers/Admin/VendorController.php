@@ -1,12 +1,16 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
-use App\Models\Purchasedgoods;
+//use App\Http\Requests\Brand;
+use App\Models\User;
+use App\Models\Brand;
+//use App\Http\Requests\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class OrderController extends BaseController
+class VendorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,30 +19,14 @@ class OrderController extends BaseController
      */
     public function index()
     {
-        $goods=DB::table('purchasedgoods')
-            ->join('products','products.id','purchasedgoods.product_id')
-            ->join('brands','brands.id','products.brand_id')
-            ->get()->toArray();
-        //name is brand name
+        $main =User::all();
 
+//        return $main;
 
-        $abc=DB::table('purchasedgoods')
-            ->join('users','users.id','purchasedgoods.user_id')
-            ->join('roles','roles.id','users.role_id')
-        ->get()->toArray();
-        //vendor is brand name
-
-//        $bb=$goods->$abc;
-//
-//        dd($abc);
-
-        return view("admin.Author.index")->with('abc',$abc)->with('goods', $goods);
-//        return $goods;
-
-
-
+        return view('admin.Author.vendor')->with('main',$main);
 
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -69,7 +57,9 @@ class OrderController extends BaseController
      */
     public function show($id)
     {
-        //
+        $brand = Brand::all();
+        $main = User::find($id);
+        return view('admin.Author.edit', compact('main', 'brand'));
     }
 
     /**
@@ -80,7 +70,9 @@ class OrderController extends BaseController
      */
     public function edit($id)
     {
-        //
+        $brand = Brand::all();
+        $main = User::find($id);
+        return view('admin.Author.edit', compact('main', 'brand'));
     }
 
     /**
@@ -92,7 +84,15 @@ class OrderController extends BaseController
      */
     public function update(Request $request, $id)
     {
-        //
+        User::find($id)->update([
+            'name' => $request->firstname,
+//            'lastname' => $request->lastname,
+            'number' => $request->number,
+            'email' => $request->email,
+            'password' =>$request->password,
+            'vendor' => $request->vendor
+        ]);
+        return redirect()->route('vendor.index')->with('success', __('admin.updated-success'));
     }
 
     /**

@@ -131,6 +131,7 @@
 					<div class="strip"></div>
 					<div class="cart-gd">
 						@foreach(Cart::content() as $item)
+{{--                            {{dd($item)}}--}}
 							<div class="cart-header">
 								<form action="{{ route('cart.destroy', $item->rowId) }}" method="post">
 									@csrf

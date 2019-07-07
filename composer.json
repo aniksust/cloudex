@@ -22,8 +22,8 @@
         "twig/twig": "^2.0",
         "symfony/twig-bridge": "^3",
         "alrik11es/cowsayphp": "^1.2",
-        "csanquer/pdo-service-provider": "~1.1dev",
-        "bitfumes/laravel-multiauth": "^1.0"
+        "csanquer/pdo-service-provider": "~1.1dev"
+
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

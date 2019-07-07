@@ -27,6 +27,7 @@
                                 <th scope="col">{{ __('site.profile-purchased-commodities-username') }}</th>
                                 <th scope="col">{{ __('site.profile-purchased-commodities-productsusername') }}</th>
                                 <th scope="col">{{ __('site.profile-purchased-commodities-price') }}</th>
+                                <th scope="col">Shipment Status </th>
                             </tr>
                             </thead>
                             <tbody>
@@ -36,6 +37,13 @@
                                 <td scope="row">{{ $item->user->name }}</td>
                                 <td scope="row">{{ $item->product->name }}</td>
                                 <td scope="row">$ {{ $item->product->price }}</td>
+                                <td>  @if(strtoupper($item->ship_status) == '')
+                                        <div class="text-info">Not Taken</div>
+                                    @elseif(strtoupper($item->payment_status) == "WAITING")
+                                        <div class="text-info">Not Taken</div>
+                                    @endif
+
+                                </td>
                             </tr>
                             @endforeach
                             </tbody>

@@ -32,7 +32,7 @@
 							@if($main->images == 'none')
 								<li data-thumb="{{ asset('/images/photo-not-available.png') }}">
 							@else
-								<li data-thumb="{{ asset('storage').'/'.$main->images }}">
+								<li data-thumb="{{ asset('storage/').'/'.$main->images }}">
 									@endif
 									<div class="thumb-image">
 										@if($main->images == 'none')

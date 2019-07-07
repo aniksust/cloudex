@@ -92,8 +92,13 @@ class CheckoutController extends BaseController
             Purchasedgoods::create([
                 'user_id' => Auth::user()->id,
                 'product_id' => $item->id,
+                'vendor' => $item->options->brand->name,
+                'ship_status'=>0
             ]);
+
+//            return $item;
         }
+
 
         Cart::destroy();
 

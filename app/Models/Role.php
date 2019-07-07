@@ -34,4 +34,9 @@ class Role extends Model
 	{
 		return $this->hasMany(User::class);
 	}
+
+    public function purchasedgoods()
+    {
+        return $this->hasMany(Purchasedgoods::class);
+    }
 }

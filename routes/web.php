@@ -31,6 +31,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['aut
         Route::get('orders', 'OrderController@index')->name('author.index');
         Route::get('/', 'AdminController@index')->name('admin.index');
         Route::get('help', 'AdminController@help')->name('admin.help');
+        Route::get('vendor', 'VendorController@index')->name('vendor.index');
+        Route::get('vendor/{id}', 'VendorController@show')->name('vendor.edit');
+        Route::put('vendor/{id}', 'VendorController@update')->name('vendor.update');
     });
 
 

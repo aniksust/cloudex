@@ -21,7 +21,9 @@ class Purchasedgoods extends Model
 	 */
     protected $fillable = [
     	'user_id',
-		'product_id'
+		'product_id',
+        'ship_status',
+        'vendor'
 	];
 
 	const CREATED_AT = 'created_at';
@@ -33,6 +35,10 @@ class Purchasedgoods extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
     }
 
 	/**

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f60318ca9e86a6fe0672a3e55b2416b9",
+    "content-hash": "c1f101f537ed1a5e7916a8bb42461ff9",
     "packages": [
         {
             "name": "alrik11es/cowsayphp",
@@ -144,61 +144,6 @@
             "time": "2019-07-03T18:08:50+00:00"
         },
         {
-            "name": "bitfumes/laravel-multiauth",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bitfumes/laravel-multiauth.git",
-                "reference": "c709996fbedbc6e903ad1bfab3ca281c96019e91"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bitfumes/laravel-multiauth/zipball/c709996fbedbc6e903ad1bfab3ca281c96019e91",
-                "reference": "c709996fbedbc6e903ad1bfab3ca281c96019e91",
-                "shasum": ""
-            },
-            "require-dev": {
-                "fzaninotto/faker": "^1.9@dev",
-                "illuminate/support": "5.8.*",
-                "mockery/mockery": "^1.0@dev",
-                "orchestra/database": "^3.8@dev",
-                "orchestra/testbench": "^3.8@dev",
-                "phpunit/phpunit": "^7.4@dev"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Bitfumes\\Multiauth\\MultiauthServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Bitfumes\\Multiauth\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "s-sarthak",
-                    "email": "sarthak@bitfumes.com"
-                }
-            ],
-            "description": "Laravel Multiauth package",
-            "keywords": [
-                "Laravel multiauth",
-                "Multi Auth",
-                "admin auth",
-                "bitfumes",
-                "multiauth"
-            ],
-            "time": "2019-03-07T17:22:08+00:00"
-        },
-        {
             "name": "cartalyst/collections",
             "version": "v1.1.0",
             "source": {
@@ -266,16 +211,16 @@
         },
         {
             "name": "cartalyst/stripe",
-            "version": "v2.2.6",
+            "version": "v2.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cartalyst/stripe.git",
-                "reference": "1c71adf7f8be6018ff0814f23465bf624ff16039"
+                "reference": "94d2f3a4aa564aedfb85cc54595a9b5e93d99b08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cartalyst/stripe/zipball/1c71adf7f8be6018ff0814f23465bf624ff16039",
-                "reference": "1c71adf7f8be6018ff0814f23465bf624ff16039",
+                "url": "https://api.github.com/repos/cartalyst/stripe/zipball/94d2f3a4aa564aedfb85cc54595a9b5e93d99b08",
+                "reference": "94d2f3a4aa564aedfb85cc54595a9b5e93d99b08",
                 "shasum": ""
             },
             "require": {
@@ -316,7 +261,7 @@
                 "php",
                 "stripe"
             ],
-            "time": "2019-07-03T18:51:10+00:00"
+            "time": "2019-07-06T19:58:17+00:00"
         },
         {
             "name": "cartalyst/stripe-laravel",
@@ -4258,16 +4203,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.4.0",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "1a1a1044ad00e285bd2825fac4c3a0443d90ad33"
+                "reference": "6fb502c23885701a991b0bba974b1a8eb6673577"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/1a1a1044ad00e285bd2825fac4c3a0443d90ad33",
-                "reference": "1a1a1044ad00e285bd2825fac4c3a0443d90ad33",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/6fb502c23885701a991b0bba974b1a8eb6673577",
+                "reference": "6fb502c23885701a991b0bba974b1a8eb6673577",
                 "shasum": ""
             },
             "require": {
@@ -4315,7 +4260,7 @@
                 "throwable",
                 "whoops"
             ],
-            "time": "2019-06-23T09:00:00+00:00"
+            "time": "2019-07-04T09:00:00+00:00"
         },
         {
             "name": "fzaninotto/faker",
@@ -4417,16 +4362,16 @@
         },
         {
             "name": "heroku/heroku-buildpack-php",
-            "version": "v157",
+            "version": "v158",
             "source": {
                 "type": "git",
                 "url": "https://github.com/heroku/heroku-buildpack-php.git",
-                "reference": "62a691bf5937d35a7236c581734352208037d710"
+                "reference": "26be51dee125027ac81bac756c3f27279623912d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/62a691bf5937d35a7236c581734352208037d710",
-                "reference": "62a691bf5937d35a7236c581734352208037d710",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/26be51dee125027ac81bac756c3f27279623912d",
+                "reference": "26be51dee125027ac81bac756c3f27279623912d",
                 "shasum": ""
             },
             "bin": [
@@ -4457,7 +4402,7 @@
                 "nginx",
                 "php"
             ],
-            "time": "2019-06-13T20:23:59+00:00"
+            "time": "2019-07-04T10:43:37+00:00"
         },
         {
             "name": "laravel/homestead",

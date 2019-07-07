@@ -13,7 +13,7 @@
         </div>
         <div class="col-lg-3">
             <div class="pull-right">
-                <a class="btn btn-original" href="{{ route('categories.create') }}">{{ __('admin.create-categories') }}</a>
+                <a class="btn btn-original" href="{{ route('categories.create') }}">Create Categories </a>
             </div>
         </div>
     </div>
