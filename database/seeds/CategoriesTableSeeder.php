@@ -13,8 +13,8 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         $category_eshirt = new Category();
-        $category_eshirt->name = 'Е-shirt';
-        $category_eshirt->url = 'eshirt';
+        $category_eshirt->name = 'T-shirt';
+        $category_eshirt->url = 'tshirt';
         $category_eshirt->men = 1;
         $category_eshirt->women = 1;
         $category_eshirt->kids = 1;

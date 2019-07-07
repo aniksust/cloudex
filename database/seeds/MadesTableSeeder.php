@@ -36,5 +36,15 @@ class MadesTableSeeder extends Seeder
         $mode_russia->name = 'Russia';
         $mode_russia->status = 1;
         $mode_russia->save();
+
+        $mode_russia = new Made();
+        $mode_russia->name = 'Bangladesh';
+        $mode_russia->status = 1;
+        $mode_russia->save();
+
+        $mode_russia = new Made();
+        $mode_russia->name = 'India';
+        $mode_russia->status = 1;
+        $mode_russia->save();
     }
 }
